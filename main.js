@@ -5,6 +5,7 @@ var sign_up_container = document.getElementById("sign-up-container");
 var success_container = document.getElementById("success-message");
 var email_adress_span = document.getElementById("email-address");
 var dismiss_button = document.getElementById("dismiss_button");
+var sign_up_img = document.getElementById("sign_up_img");
 
 email.addEventListener("focus", (e) => {
     e.preventDefault();
@@ -32,3 +33,7 @@ dismiss_button.addEventListener("click", (e) => {
     sign_up_container.style.display = "flex";
 }
 );
+
+if(window.outerWidth < 1000){
+    sign_up_img.src = "assets/images/illustration-sign-up-mobile.svg";
+}
